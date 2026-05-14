@@ -80,11 +80,11 @@
 
 @media (max-width: 768px) {
     .cards-row {
-        background: #ffffff83;
+        /* background: #ffffff83; */
         width: 85%;
         margin-left: 7.5%;
         height: 150px;
-        margin-top: -260px;
+        margin-top: -320px;
     }
 
     .cards {
