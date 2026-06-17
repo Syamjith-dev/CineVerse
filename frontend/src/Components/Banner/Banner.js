@@ -143,7 +143,7 @@ const Banner = (props) => {
             const token = localStorage.getItem("token");
 
             const response = await axios.get(
-                "http://cineverse-5xo9.onrender.com/api/watchlist",
+                "https://cineverse-5xo9.onrender.com/api/watchlist",
                 {
                     headers: {
                         Authorization: token
@@ -167,7 +167,7 @@ const Banner = (props) => {
             const token = localStorage.getItem("token");
 
             await axios.post(
-                "http://cineverse-5xo9.onrender.com/api/watchlist/add",
+                "https://cineverse-5xo9.onrender.com/api/watchlist/add",
                 {
                     movieId: movie.id,
                     title: movie.title,

@@ -25,7 +25,7 @@ const Login = () => {
     try {
 
       const res = await axios.post(
-        'http://cineverse-5xo9.onrender.com/api/auth/login',
+        'https://cineverse-5xo9.onrender.com/api/auth/login',
         {
           email: loginData.email,
           password: loginData.password
