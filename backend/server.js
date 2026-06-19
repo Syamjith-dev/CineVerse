@@ -6,7 +6,6 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
@@ -36,9 +35,15 @@ app.listen(PORT, () => {
 
 app.use(cors({
   origin: [
-    "http://localhost:3000",
-    "https://filmfy.netlify.app"
+    "https://filmfy.netlify.app",
+    "http://localhost:3000"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+
+app.use((req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
