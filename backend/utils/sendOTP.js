@@ -7,7 +7,7 @@ const sendOTP = async (email, otp) => {
 
     console.log("OTP Generated:", otp);
 
-    await resend.emails.send({
+    const response = await resend.emails.send({
       from: "Filmfy <onboarding@resend.dev>",
       to: email,
       subject: "Verify your Filmfy Account",
